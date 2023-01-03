@@ -1,0 +1,144 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow: hidden;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #ccc;
+    padding: 200px 0;
+    /*background-color: #0f0f0f;*/
+}
+
+.subscribers {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 25%;
+    background-color: #0f0f0f;
+    /*background-color: rgb(181, 173, 173);*/
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px;
+}
+
+body>h1 {
+    font-family: monospace;
+    color: black;
+    text-align: center;
+}
+
+.subscribers * {
+    color: white;
+}
+
+.subscribers .profileHeader .channelInfo {
+    display: flex;
+}
+
+.subscribers .profileHeader .channelInfo .profileHeaderText {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 2px;
+}
+
+.subscribers .profileHeader .channelInfo>*:not(:first-child) {
+    margin-left: calc(5 * 2px);
+    margin-top: calc(5 * 2px);
+}
+
+.subscribers .profileHeader .headerImage {
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 75px;
+    height: 75px;
+    cursor: pointer;
+    position: relative;
+}
+
+.subscribers a {
+    transition: 250ms;
+}
+
+.subscribers a:hover {
+    color: peru;
+}
+
+.subscribers .profileHeader .headerImage img {
+    width: 100%;
+    height: 100%;
+    transition: 250ms;
+}
+
+.subscribers .profileHeader .headerImage:hover::before {
+    opacity: 1;
+}
+
+.subscribers .profileHeader .headerImage::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 500ms;
+    background: url("https://cdn1.iconfinder.com/data/icons/office-and-business-roundicons/137/Office_Business_work-40-256.png") no-repeat center fixed;
+    background-size: cover;
+}
+
+.subscribers .profileHeader .subscribeInfo {
+    margin-top: 10px;
+    opacity: 0.6;
+}
+
+.subscribers .profileHeader .subscribeInfo>* {
+    display: inline;
+}
+
+.subscribers .profileHeader .subscribeInfo>*:not(:first-child) {
+    margin-left: 5px;
+}
+
+.subscribe-btn {
+    background-color: #fff;
+    color: #393838;
+    padding: 15px 30px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 250ms;
+    display: flex;
+    align-items: center;
+    border: none;
+}
+
+.buttonsAction {
+    position: relative;
+}
+
+.buttonsAction svg.bellSvg {
+    cursor: pointer;
+    left: 6%;
+    top: 24%;
+    position: absolute;
+    width: 25px;
+    height: 25px;
+}
+
+.subscribe-btn svg {
+    top: 5%;
+}
+
+@media screen and (max-width: 800px) {
+    .subscribers {
+        width: 96%;
+        padding: 0 25px;
+    }
+}
