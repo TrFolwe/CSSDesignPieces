@@ -2,5 +2,6 @@
 
 # Projects
 <ul>
-<li>Youtube Subscribe</li>
+<li>Youtube Subscribe Design Template</li>
+<li>YouTube Video Design Template</li>
 </ul>
